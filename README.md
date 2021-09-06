@@ -37,7 +37,3 @@ Requisitos técnicos
 - A criação da base de dados deverá ser automática (sem a necessidade de utilizar algum
   comando adicional).
 - Criar testes unitários (Cobrir ao menos 80% dos fluxos)
-
-Importante!
-O código fonte deverá ser disponibilizado no GitHub como um repositório público do próprio candidato. O código deverá conter todas as instruções para que o mesmo possa ser executado.
-A prova será desqualificada caso os respectivos testes não possam ser executados por falta de documentação.
