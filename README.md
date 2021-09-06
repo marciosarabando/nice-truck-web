@@ -6,9 +6,10 @@ Pré-Requisito
 
 Execução:
 
-- Acessar pelo terminal o diretório da aplicação web "NiceTruck.Web"
-- Executar o comando dotnet run
-- Acessar o sistem pela url local: https://localhost:5001/
+- Clonar o projeto em um diretório local
+- Acessar pelo terminal o diretório da aplicação web: /NiceTruck.Web
+- Executar o comando "dotnet run"
+- Acessar o sistema pela url local: https://localhost:5001/
 
 Requisito principal
 Como usuário, eu necessito de um cadastro de caminhões, onde eu possa:
