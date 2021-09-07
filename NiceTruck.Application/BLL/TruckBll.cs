@@ -49,7 +49,8 @@ namespace NiceTruck.Application.BLL
         {
             var truck = _mapper.Map<Truck>(truckModel);
 
-            await _truckRepository.CreateTruckAsync(truck, cancelationToken);
+            if (truck.IsValid())
+                await _truckRepository.CreateTruckAsync(truck, cancelationToken);
         }
 
         public async Task<TruckViewModel> GetTruckEnableByIdAsync(int? idTruck, CancellationToken cancelationToken = default)
@@ -65,12 +66,19 @@ namespace NiceTruck.Application.BLL
 
             var truckUpdated = _mapper.Map(truckModel, truck);
 
-            await _truckRepository.UpdateTruckAsync(truckUpdated, cancelationToken);
+            truckUpdated.SetDateTimeUpdated();
+
+            if (truck.IsValid())
+                await _truckRepository.UpdateTruckAsync(truckUpdated, cancelationToken);
         }
 
         public async Task DeleteTruckAsync(int? idTruck, CancellationToken cancelationToken = default)
         {
-            await _truckRepository.DeleteTruckAsync(idTruck, cancelationToken);
+            var truck = await _truckRepository.GetDetailsTruckEnableByIdAsync(idTruck, cancelationToken);
+
+            truck.SetDisabled();
+
+            await _truckRepository.UpdateTruckAsync(truck, cancelationToken);
         }
     }
 }

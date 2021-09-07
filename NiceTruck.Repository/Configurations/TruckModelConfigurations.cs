@@ -24,8 +24,8 @@ namespace NiceTruck.Repository.Configurations
                 .WithOne(p => p.TruckModel);
 
             builder.HasData(new[]{
-                new TruckModel { Id = 1, Description = "FH", Active = true, DateTimeCreated = DateTime.Now },
-                new TruckModel { Id = 2, Description = "FM", Active = true, DateTimeCreated = DateTime.Now },
+                new TruckModel(1, "FH"),
+                new TruckModel(2, "FM"),
             });
         }
     }

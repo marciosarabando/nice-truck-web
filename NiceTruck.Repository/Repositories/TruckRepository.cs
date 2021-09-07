@@ -37,41 +37,14 @@ namespace NiceTruck.Repository.Repositories
                 .FirstOrDefaultAsync(cancelationToken);
         }
 
-        public Task CreateTruckAsync(Truck truck, CancellationToken cancelationToken = default)
+        public async Task CreateTruckAsync(Truck truck, CancellationToken cancelationToken = default)
         {
-            return Task.Run(() =>
-            {
-                truck.DateTimeCreated = DateTime.Now;
-                truck.Active = true;
-
-                _context.AddAsync(truck);
-                _context.SaveChangesAsync(cancelationToken);
-            });
+            _context.Add(truck);
+            await _context.SaveChangesAsync(cancelationToken);
         }
 
-        public Task UpdateTruckAsync(Truck truck, CancellationToken cancelationToken = default)
+        public async Task UpdateTruckAsync(Truck truck, CancellationToken cancelationToken = default)
         {
-            return Task.Run(() =>
-            {
-                truck.DateTimeUpdated = DateTime.Now;
-
-                _context.Update(truck);
-                _context.SaveChangesAsync(cancelationToken);
-            });
-        }
-
-        public async Task DeleteTruckAsync(int? idTruck, CancellationToken cancelationToken = default)
-        {
-            var truck = await _context.Trucks
-                .Where(x => x.Active && x.Id == idTruck)
-                .FirstOrDefaultAsync(cancelationToken);
-
-            if (truck == null)
-                return;
-
-            truck.Active = false;
-            truck.DateTimeUpdated = DateTime.Now;
-
             _context.Update(truck);
             await _context.SaveChangesAsync(cancelationToken);
         }

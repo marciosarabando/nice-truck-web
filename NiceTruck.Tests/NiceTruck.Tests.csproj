@@ -14,8 +14,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\NiceTruck.Application\NiceTruck.Application.csproj" />
-    <ProjectReference Include="..\NiceTruck.IoC\NiceTruck.IoC.csproj" />
+    <ProjectReference Include="..\NiceTruck.Domain\NiceTruck.Domain.csproj" />
   </ItemGroup>
 
 </Project>

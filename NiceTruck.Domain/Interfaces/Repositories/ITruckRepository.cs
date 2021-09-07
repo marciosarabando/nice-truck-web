@@ -11,6 +11,5 @@ namespace NiceTruck.Domain.Interfaces.Repositories
         Task<Truck> GetDetailsTruckEnableByIdAsync(int? idTruck, CancellationToken cancelationToken = default);
         Task CreateTruckAsync(Truck truck, CancellationToken cancelationToken = default);
         Task UpdateTruckAsync(Truck truck, CancellationToken cancelationToken = default);
-        Task DeleteTruckAsync(int? idTruck, CancellationToken cancelationToken = default);
     }
 }
