@@ -2,3 +2,6 @@
 obj
 bin
 *.db
+
+./NiceTruck.Web/NiceTruck.db-shm
+./NiceTruck.Web/NiceTruck.db-wal
