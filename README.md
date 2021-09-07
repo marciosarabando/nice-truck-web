@@ -11,6 +11,11 @@ Execução:
 - Executar o comando "dotnet run"
 - Acessar o sistema pela url local: https://localhost:5001/
 
+Testes:
+
+- Acessar pelo terminal o diretório da solution /NiceTruck-APP
+- Executar o comando "dotnet test"
+
 Requisito principal
 Como usuário, eu necessito de um cadastro de caminhões, onde eu possa:
 
