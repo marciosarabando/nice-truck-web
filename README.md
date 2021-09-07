@@ -2,7 +2,7 @@
 
 Pré-Requisito
 
-- Sdk .Net Core: 5.0.302
+- Sdk .Net 5.0
 
 Execução:
 
