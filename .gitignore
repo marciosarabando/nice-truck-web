@@ -3,6 +3,7 @@
 obj
 bin
 *.db
+.DS_Store
 
 ./NiceTruck.Web/NiceTruck.db-shm
 ./NiceTruck.Web/NiceTruck.db-wal
