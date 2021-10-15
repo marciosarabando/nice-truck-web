@@ -7,3 +7,6 @@ bin
 
 ./NiceTruck.Web/NiceTruck.db-shm
 ./NiceTruck.Web/NiceTruck.db-wal
+
+NiceTruck.db-shm
+NiceTruck.db-wal
